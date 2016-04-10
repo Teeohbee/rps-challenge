@@ -1,16 +1,27 @@
 <!DOCTYPE html>
 <html>
+<head>
+
+<style>
+  .weapon-img {
+    width:128px;
+    height:128px;
+  }
+</style>
+
+</head>
+
 <body>
 
 <h1>Results: <%= @result %></h1>
 <h2>You chose:</h2>
-<img src=/images/<%=@weapon%>.png style="width:128px;height:128px;">
+<img src=/images/<%=@weapon%>.png class="weapon-img" id="weapon">
 <p><%= @weapon %></p>
 
 <br>
 
 <h2>Your opponent chose:</h2>
-<img src=/images/<%=@opponent_choice%>.png style="width:128px;height:128px;">
+<img src=/images/<%=@opponent_choice%>.png  class="weapon-img my-class" >
 <p><%= @opponent_choice %></p>
 
 <form action="/game">
